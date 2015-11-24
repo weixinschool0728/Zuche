@@ -1,0 +1,7 @@
+<div class="setting-sidebar pull-left">
+    <ul class="list-unstyled setting-list">
+        <{foreach $code.menu[$smarty.get.c].sub as $key => $val}>
+        <li <{if $smarty.get.a==$key || ($smarty.get.a=='' && $key=='index')}>class="active"<{/if}>><a href="<{$val.uri}>"><{$val.name|escape}></a></li>
+        <{/foreach}>
+    </ul>
+</div>

@@ -14,8 +14,8 @@
 //// var_dump($mysql->query($sql));
 define('DS', DIRECTORY_SEPARATOR);
 
-define("INDEX_PATH",  dirname(__FILE__));
-define("APP",INDEX_PATH.DS."Zuche".DS);
+define("INDEX_PATH",  dirname(__FILE__).DS);
+define("APP",INDEX_PATH."Zuche".DS);
 require_once APP.DS."init.php";
 $dispatcher = new ModalDispatcher;
 $dispatcher->dispatch();

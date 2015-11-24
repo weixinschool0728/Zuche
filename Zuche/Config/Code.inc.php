@@ -2,24 +2,28 @@
 #vesion no
 $code['vesion'] = '1.1.262200';
 
-$code['menu'] = array(
-    'service' => array(
-        'name' => 'サービス一覧',
-        'uri' => '?c=service',
+$code['adminMenu'] = array(
+    'user' => array(
+        'name' => '用户管理',
+        'uri' => '?c=admin&a=userList',
         'menu_no' => 'no_1',
     ),
-    'user' => array(
-        'name' => 'お客様管理',
-        'role' => array(0, 1),
+    'order' => array(
+        'name' => '订单管理',
         'sub' => array(
             'index' => array('name' => 'ユーザ設定', 'uri' => '?c=user&amp;a=index', 'menu_no' => 'no_2',),
             'serviceSetting' => array('name' => '利用サービス設定', 'uri' => '?c=user&amp;a=serviceSetting', 'menu_no' => 'no_3',),
             'contact' => array('name' => '連絡先情報', 'uri' => '?c=user&amp;a=contact', 'menu_no' => 'no_4',),
         ),
     ),
-    'product' => array(
-		'name' => '契約設定',
-        'role' => array(0, 1, 3),
+    'orderLog' => array(
+		'name' => '订单日志',
+		'sub' => array(
+			'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_5',),
+		),
+	),
+    'class' => array(
+		'name' => '分类管理',
 		'sub' => array(
 			'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_5',),
 		),

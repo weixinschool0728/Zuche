@@ -30,3 +30,7 @@ include_once(CORE . 'ModalValidator.php');
 include_once(APP_CORE . 'AppController.php');
 include_once(APP_CORE . 'AppModel.php');
 include_once(APP_CORE . 'AppView.php');
+
+if (defined('SESSION_START') && SESSION_START) {
+    session_start();
+}

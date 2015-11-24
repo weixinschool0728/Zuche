@@ -1,0 +1,5 @@
+<{foreach from=$css key=media item=item}>
+    <{foreach from=$item item=item1}>
+    <link rel="stylesheet" href="./css/<{$item1|escape}>" type="text/css" media="<{$media}>" />
+    <{/foreach}>
+<{/foreach}>

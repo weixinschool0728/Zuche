@@ -1,0 +1,24 @@
+[2015-11-24 15:26:22]
+select * from tb_user where email='772321344@qq.com' and deleted =0 limit 1;
+
+[2015-11-24 15:26:22]
+UPDATE `tb_user` SET `updated` = '2015-11-24 15:26:22' WHERE u_id;
+
+[2015-11-24 15:33:24]
+select * from tb_user where email='772321344@qq.com' and deleted =0 limit 1;
+
+[2015-11-24 15:33:24]
+UPDATE `tb_user` SET `updated` = '2015-11-24 15:33:24' WHERE u_id;
+
+[2015-11-24 15:35:12]
+select * from tb_user where email='772321344@qq.com' and deleted =0 limit 1;
+
+[2015-11-24 15:35:12]
+UPDATE `tb_user` SET `updated` = '2015-11-24 15:35:12' WHERE u_id;
+
+[2015-11-24 15:41:50]
+select * from tb_user where email='772321344@qq.com' and deleted =0 limit 1;
+
+[2015-11-24 15:41:50]
+UPDATE `tb_user` SET `updated` = '2015-11-24 15:41:50' WHERE u_id;
+

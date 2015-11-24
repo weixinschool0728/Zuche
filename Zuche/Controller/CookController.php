@@ -35,7 +35,7 @@ class CookController extends AppController {
     function listAction() {
         $page = $this->post('page', 1);
         $rows = $this->post('rows', 20);
-        $id = $this->post('id');
+        $id = $this->post('id',1);
         if ($id < 0 || $page <= 0 || $rows < 0) {
            echo json_encode($this->returns);
             die;

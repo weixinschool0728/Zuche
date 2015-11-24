@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>筆まめクラウドライセンス管理</title>
+    <meta name="Keywords" content="キーワード" />
+    <meta name="Description" content="説明" />
+    <meta name="viewport" content="width=1000" />
+
+    <link rel="stylesheet" href="css/base.css" type="text/css" />
+    <link rel="stylesheet" href="css/content.css" type="text/css" media="screen,print" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/pagetop.js" type="text/javascript"></script>
+    <script src="js/popup.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="js/selectivizr-min.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+    <script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>
+        DD_belatedPNG.fix('img, .png');
+    </script>
+    <![endif]-->
+
+    <{include file="../Common/css.html"}>
+    <{include file="../Common/js.html"}>
+    <{foreach $inlineJs as $row}>
+    <{if $row@first}><script type=text/javascript><{/if}>
+        <{$row}>
+    <{if $row@first}></script><{/if}>
+    <{/foreach}>
+    <style type="text/css">
+        .freeword{
+            font-size:inherit !important;
+            margin-left:0 !important;
+            background-color:blue !important;
+            color: white !important;
+        }
+        .placeholder { color: #CCC }
+    </style>
+</head>
+<body>
+<{$main}>
+</body>
+</html>

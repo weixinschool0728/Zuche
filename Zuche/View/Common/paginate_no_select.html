@@ -1,0 +1,36 @@
+<link href="./css/page.css?v=<{$code.vesion}>" rel="stylesheet"> 
+<div class="pagination pagination-right" >
+    
+    <ul>
+        <li class="total disabled"><a href="javascript:;" style="cursor: default"><{$paging.count|number_format}>件</a></li>
+        <{if $paging.count}>
+        <{if $paging.start}>
+        <li><a href="<{brave_uri_replace array=sh page=1}>">&laquo;</a></li>
+        <{/if}>
+        <{if $paging.pre}>
+        <li><a href="<{brave_uri_replace array=sh page=$paging.pre}>">&lt; 前</a></li>
+        <{else}>
+        <li class="disabled"><a href="javascript:;" style="cursor: default">&lt; 前</a></li>
+        <{/if}>
+        
+        <{section name=main start=$paging.main.start loop=$paging.main.start + $paging.main.count}>
+        <{if $smarty.section.main.index eq $paging.page}>
+        <li class="active"><a href="<{brave_uri_replace array=sh page=$smarty.section.main.index}>" ><{$smarty.section.main.index}></a></li>
+        <{else}>
+        <li><a href="<{brave_uri_replace array=sh page=$smarty.section.main.index}>"><{$smarty.section.main.index}></a></li>
+        <{/if}>
+        <{/section}>
+        
+        <{if $paging.next}>
+        <li><a href="<{brave_uri_replace array=sh page=$paging.next}>">次 &gt;</a></li>
+        <{else}>
+        <li class="disabled"><a href="javascript:;">次 &gt;</a></li>
+        <{/if}>
+
+        <{if $paging.end}>
+        <li><a href="<{brave_uri_replace array=sh page=$paging.pages}>">&raquo;</a></li>
+        <{/if}>
+        <{/if}>
+    </ul>
+    
+</div>
