@@ -1,0 +1,57 @@
+[2015-11-19 05:18:05]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:26:40]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:28:05]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:29:27]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:29:36]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:32:15]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:32:15]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:32:19]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:36:31]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:37:40]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:39:47]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:41:58]
+select * from caipu limit 0,10;
+
+[2015-11-19 05:50:29]
+select * from caipu where id ='111' and deleted = 0;
+
+[2015-11-19 05:51:43]
+select * from caipu where id ='111' and deleted = 0;
+
+[2015-11-19 05:51:53]
+select * from caipu where id ='756' and deleted = 0;
+
+[2015-11-19 05:52:31]
+select * from caipu where id ='671' and deleted = 0;
+
+[2015-11-19 06:14:03]
+select * from caipu where id ='111' and deleted = 0;
+
+[2015-11-19 06:14:08]
+select * from caipu where id ='671' and deleted = 0;
+
+[2015-11-19 06:15:07]
+select * from caipu where id ='111' and deleted = 0;
+
