@@ -1,0 +1,169 @@
+
+<link rel="stylesheet" type="text/css" href="/assets/css/zzsc.css">
+
+<!--<script type="text/javascript" class="library" src="js/jquery-1.8.2.min.js"></script>-->
+<script type="text/javascript" class="library" src="/assets/js/my97date/wdatepicker.js"></script>          
+<script type="text/javascript" class="library" src="/assets/js/zzsc.js"></script>                
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="#">首页</a>
+            </li>
+            <li class="active">车辆管理</li>
+        </ul><!-- .breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="icon-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div><!-- #nav-search -->
+    </div>
+
+    <div class="page-content">
+        <div class="page-header ">
+            <h1>
+                车辆管理
+                <small>
+                    <i class="icon-double-angle-right"></i>
+                    查看
+                </small>
+            </h1>
+        </div><!-- /.page-header -->
+        <div class="clear"></div>
+
+        <div class="row">
+            <div class="space-6"></div>
+            <div class="col-xs-5 col-sm-5 col-md-5" >
+                <!--                                <div class="cat_images">
+                                                    <img src="<{$car.car_head}>" width="300">
+                                                </div>-->
+
+
+                <div class="con-FangDa" id="fangdajing">
+                    <div class="con-fangDaIMg">
+
+                        <img src="<{$car.car_head}>">
+
+                        <div class="magnifyingBegin"></div>
+
+                        <div class="magnifyingShow"><img src="<{$car.car_head}>" alt="<{$car.car_name}>"></div>
+                    </div>
+
+                    <ul class="con-FangDa-ImgList">
+                        <{foreach from=$car.car_images key=key item=car_image name=name}>
+                        <{if $key==0}>
+                        <li class="active"><img src="<{$car_image}>" data-bigimg="<{$car_image}>"></li>
+                        <{else}>
+                        <li><img src="<{$car_image}>" data-bigimg="<{$car_image}>"></li>
+                        <{/if}>
+                        <{/foreach}>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-5 pricing-box" style="z-index: 1">
+                <div class="widget-box">
+                    <div class="widget-header header-color-orange">
+                        <h5 class="bigger lighter"><{$car.car_name}></h5>
+                    </div>
+                    <form name="car_order" action="?c=order&a=orderAdd" method="post">
+                        <input type="hidden" name="carid" value="<{$car.car_id}>">
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <ul class="list-unstyled spaced2">
+                                    <li>
+                                        <i class="icon-ok green"></i>
+                                        单价：￥<{$car.price}>/小时
+                                    </li>
+
+                                    <li>
+                                        <i class="icon-ok green"></i>
+                                        剩余数量：<{$car.car_num}>
+                                    </li>
+
+
+                                </ul>
+
+                                <hr>
+                                <div class="choosetime">
+
+                                    服务时间：<input  name="start_time"  id="d5221" class="Wdate" type="text" onFocus="var d5222 = $dp.$('d5222');
+                                            WdatePicker({onpicked: function () {
+                                                    d5222.focus();
+                                                }, maxDate: '#F{$dp.$D(\'d5222\')}', dateFmt: 'yyyy-MM-dd HH:mm:ss'})"/>至
+                                    <input name="end_time" id="d5222" class="Wdate" type="text" onFocus="WdatePicker({minDate: '#F{$dp.$D(\'d5221\')}', dateFmt: 'yyyy-MM-dd HH:mm:ss'})"/>
+
+
+                                    <div class="margin-10"> 备 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注 ：
+                                        <textarea name="o_dec"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-block btn-warning" >
+                                    <i class="icon-shopping-cart bigger-110"></i>
+                                    <span>Buy</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-5 pricing-box" style="z-index: 1">
+                <div class="widget-box">
+                    <div class="widget-header header-color-orange">
+                        <h5 class="bigger lighter">汽车属性</h5>
+                    </div>                   
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <{if $car.attributes}>
+                            <ul class="list-unstyled spaced2">
+                                <{$attribArr=unserialize($car.attributes)}>
+                                <{foreach $attribArr as $key=>$val}>
+                                <li>
+                                    <i class="icon-ok green"></i>
+                                    <{$key}>：<{$val}>
+                                </li>
+                                <{/foreach}>
+
+                            </ul>
+
+                            <{else}>
+                            暂无
+                            <{/if}>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div><!-- /.page-content -->
+</div><!-- /.main-content -->
+
+<script>
+    function suborder() {
+        var start_time = $('input[name="start_time"]').val();
+        var end_time = $('input[name="end_time"]').val();
+        alert(start_time + end_time);
+    }
+</script>

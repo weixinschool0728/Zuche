@@ -60,7 +60,7 @@ class ModalController extends Modal{
     }
 
     function forward($forward, $data = null) {
-        $dispatcher = $this->getGlobal('BraveDispatcher');
+        $dispatcher = $this->getGlobal('ModalDispatcher');
         $dispatcher->dispatch($forward, $data);
     }
 

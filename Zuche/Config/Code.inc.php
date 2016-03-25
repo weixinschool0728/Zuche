@@ -3,54 +3,46 @@
 $code['vesion'] = '1.1.262200';
 
 $code['adminMenu'] = array(
-    'user' => array(
-        'name' => '用户管理',
-        'uri' => '?c=admin&a=userList',
-        'menu_no' => 'no_1',
-    ),
-    'order' => array(
-        'name' => '订单管理',
-        'sub' => array(
-            'index' => array('name' => 'ユーザ設定', 'uri' => '?c=user&amp;a=index', 'menu_no' => 'no_2',),
-            'serviceSetting' => array('name' => '利用サービス設定', 'uri' => '?c=user&amp;a=serviceSetting', 'menu_no' => 'no_3',),
-            'contact' => array('name' => '連絡先情報', 'uri' => '?c=user&amp;a=contact', 'menu_no' => 'no_4',),
+        'name' => '后台管理',
+		'sub' => array(
+            'user' => array(
+                'name' => '用户管理',
+                'uri' => '?c=admin&a=userList',
+                'menu_no' => 'no_1',
+            ),
+            'order' => array(
+                'name' => '订单管理',
+                'sub' => array(
+                    'index' => array('name' => 'ユーザ設定', 'uri' => '?c=user&amp;a=index', 'menu_no' => 'no_2',),
+                    'serviceSetting' => array('name' => '利用サービス設定', 'uri' => '?c=user&amp;a=serviceSetting', 'menu_no' => 'no_3',),
+                    'contact' => array('name' => '連絡先情報', 'uri' => '?c=user&amp;a=contact', 'menu_no' => 'no_4',),
+                ),
+            ),
+            'orderLog' => array(
+                'name' => '订单日志',
+                'sub' => array(
+                    'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_5',),
+                ),
+            ),
+            'class' => array(
+                'name' => '分类管理',
+                'sub' => array(
+                    'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_6',),
+                ),
+            ),
+            'carmanger' => array(
+                'name' => '车辆管理',
+                'sub' => array(
+                    'index' => array('name' => '车辆一览', 'uri' => '?c=car&a=mindexlist', 'menu_no' => 'no_7',),
+                ),
+            ),
         ),
-    ),
-    'orderLog' => array(
-		'name' => '订单日志',
-		'sub' => array(
-			'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_5',),
-		),
-	),
-    'class' => array(
-		'name' => '分类管理',
-		'sub' => array(
-			'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_5',),
-		),
-	),
-   /* 'iplimit' => array(
-		'name' => 'セキュリティ設定',
-        'role' => array(0, 1),
-		'sub' => array(
-			'index' => array('name' => 'IPアドレス制限', 'uri' => '?c=iplimit&a=index', 'menu_no' => 'no_6',),
-		),
-	),*/
-    'person' => array(
-		'name' => '個人アカウント情報',
-        'role' => array(0, 1, 2, 3),
-		'sub' => array(
-			'account' => array('name' => 'プロフィール変更', 'uri' => '?c=person&a=setComp', 'menu_no' => 'no_7',),
-            'email' => array('name' => 'メールアドレス変更', 'uri' => '?c=person&a=setEmail', 'menu_no' => 'no_8',),
-            'password' => array('name' => 'パスワード変更', 'uri' => '?c=person&a=setPwd', 'menu_no' => 'no_9',),
-            'question' => array('name' => '秘密の質問再登録', 'uri' => '?c=person&a=setQust', 'menu_no' => 'no_10',),
-            'deleted' => array('name' => 'アカウント削除(筆まめクラウド退会）', 'uri' => '?c=person&a=deleted', 'menu_no' => 'no_11',),
-		),
-	)
+    
 );
 
 $code['order'] = array(
-    'service' => array(
-        'a' => array('field' => 'service_sort', 'default' => 'asc'),
+    'car' => array(
+        'a' => array('field' => 'sort', 'default' => 'asc'),
         'b' => array('field' => 'service_type'),
     ),
     'product' => array(

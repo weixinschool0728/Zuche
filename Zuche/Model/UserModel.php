@@ -20,26 +20,35 @@ class UserModel extends AppModel {
         if ($type > -1) {
             $sql.=" and u_type='{$all}' ";
         }
-        if(is_array($all)){
+        if (is_array($all)) {
             $sql.= "limit {$all['start']},{$all['limit']} ";
         }
         return $this->getAll($sql);
     }
-    
-    function getUserByEmail($email){
-        if(!$email){
+
+    function getUserByEmail($email) {
+        if (!$email) {
             return FALSE;
         }
-        $sql="select * from {$this->table} where email='{$email}' and deleted =0 limit 1";
-        
-       return $this->getOne($sql);
-        
+        $sql = "select * from {$this->table} where email='{$email}' and deleted =0 limit 1";
+
+        return $this->getOne($sql);
     }
-    function updateUser($data,$id=0){
-        if(!preg_match("/\d+/i", $id) || !is_array($data)){
+
+    function updateUser($data, $id = 0) {
+        if (!preg_match("/\d+/i", $id) || !is_array($data)) {
             return false;
         }
         return $this->Update($this->table, $data, "u_id");
+    }
+
+    function addUser($data = array()) {
+
+        if (!is_array($data)) {
+            return false;
+        }
+        $data['created'] = NOW;
+        return $this->Insert($this->table, $data);
     }
 
 }

@@ -1,0 +1,183 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="#">首页</a>
+            </li>
+            <li class="active">车辆管理</li>
+        </ul><!-- .breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="icon-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div><!-- #nav-search -->
+    </div>
+
+    <div class="page-content">
+        <div class="page-header pull-left">
+            <h1>
+                车辆管理
+                <small>
+                    <i class="icon-double-angle-right"></i>
+                    查看
+                </small>
+            </h1>
+        </div><!-- /.page-header -->
+        <div class="pull-right">
+            <{include file="../Common/paginate_no_select.html"}>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="table-responsive">
+                    <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="center">
+                                    <label>
+                                        <input type="checkbox" class="ace">
+                                        <span class="lbl"></span>
+                                    </label>
+                                </th>
+                                <th>车名</th>
+                                <th>缩略图</th>
+                                <th>价格</th>
+                                <th>
+                                    <i class="icon-time bigger-110 hidden-480"></i>
+                                    更新
+                                </th>
+                                <th >描述</th>
+                                
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                           <{foreach $car as $c}>
+                            <tr>
+                                <td class="center">
+                                    <label>
+                                        <input type="checkbox" name="ids[]" value="<{$c['car_id']}>" class="ace">
+                                        <span class="lbl"></span>
+                                    </label>
+                                </td>
+
+                                <td>
+                                    <a href="/?c=car&a=index&carid=<{$c.car_id}>"><{$c['car_name']}></a>
+                                </td>
+                                <td>
+                                    <img src="<{$c.car_head}>" height="30" width="40">
+                                </td>
+                                <td><{$c.price}></td>
+                                <td><{$c.updated}></td>
+                                <td ><{$c.car_dec|truncate:200}></td>
+
+                              
+
+                                <td>
+                                    <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+                                        <button class="btn btn-xs btn-success" id="<{$c.car_id}>">
+                                            <i class="icon-ok bigger-120"></i>
+                                        </button>
+
+                                        <button class="btn btn-xs btn-info" id="<{$c.car_id}>">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </button>
+
+                                        <button class="btn btn-xs btn-danger" id="<{$c.car_id}>">
+                                            <i class="icon-trash bigger-120"></i>
+                                        </button>
+
+                                    </div>
+
+<!--                                    <div class="visible-xs visible-sm hidden-md hidden-lg">
+                                        <div class="inline position-relative">
+                                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                <i class="icon-cog icon-only bigger-110"></i>
+                                            </button>
+
+                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+                                                <li>
+                                                    <a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
+                                                        <span class="blue">
+                                                            <i class="icon-zoom-in bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+                                                        <span class="green">
+                                                            <i class="icon-edit bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+                                                        <span class="red">
+                                                            <i class="icon-trash bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>-->
+                                </td>
+                            </tr>
+                            <{/foreach}>
+                        </tbody>
+                    </table>
+                </div><!-- /.table-responsive -->
+
+
+
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.page-content -->
+</div><!-- /.main-content -->
+
+<script>
+    $(function(){
+        $("button.btn-success").click(function(){
+            var id=this.id;
+            window.location.href="/?c=car&a=index&carid="+id;
+        });
+         $("button.btn-danger").click(function(){
+            var id=this.id;
+            if(!confirm("确定删除吗？ ")){
+                return ;
+            }
+            $.get("?c=car&a=moption&optype=1&carid="+id,function(data){
+                data=JSON.parse(data);
+                if(data.status==1){
+                alert("删除成功！");
+                window.location.href="";
+                }else{
+                alert("删除失败！");    
+                }
+            });
+        });
+         $("button.btn-info").click(function(){
+            var id=this.id;
+            window.location.href="/?c=car&a=medit&carid="+id;
+        });
+    });
+    
+    
+</script>

@@ -162,7 +162,7 @@ class AppModel extends ModalModel {
             }
             $sql .= ($i == 1 ? "" : ",") . "('" . implode("','", $value) . "')";
         }
-//		echo $sql;die;
+
         $rs = $this->Execute($sql);
         return $rs;
     }
@@ -182,7 +182,7 @@ class AppModel extends ModalModel {
             'send_to' => $sendto,
         );
 
-        $sendMail = $this->load(EXTEND, "BraveMailer");
+        $sendMail = $this->load(EXTEND, "ModalMailer");
         if (!$sendMail->sendmail($sendto, $tpl, $data)) {
             $emailData['status'] = 0;
         }

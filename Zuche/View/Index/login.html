@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>登录页面 - Bootstrap后台管理系统模版Ace下载</title>
-		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
-		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<title>登录页面 </title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -20,7 +20,7 @@
 
 		<!-- fonts -->
 
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+		<link rel="stylesheet" href="assets/css/css.css" />
 
 		<!-- ace styles -->
 
@@ -69,7 +69,7 @@
 
 											<div class="space-6"></div>
 
-                                            <form action="" method="post">
+                                            <form action="?c=index&a=login" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -192,32 +192,37 @@
 											<div class="space-6"></div>
 											<p> Enter your details to begin: </p>
 
-											<form>
+											<form action="?c=index&a=register" method="post" name="register_form">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+                                                            <input type="email" class="form-control" name="email" placeholder="Email" />
 															<i class="icon-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" name="name" placeholder="Username" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
-
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="text" class="form-control" name="phone" placeholder="Phone" />
+															<i class="icon-phone-sign"></i>
+														</span>
+													</label>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+                                                            <input type="password" class="form-control" name="pass" placeholder="Password" />
 															<i class="icon-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+                                                            <input type="password" class="form-control" name="passre" placeholder="Repeat password" />
 															<i class="icon-retweet"></i>
 														</span>
 													</label>
@@ -238,7 +243,7 @@
 															Reset
 														</button>
 
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
+                                                        <button type="button" class="width-65 pull-right btn btn-sm btn-success" onclick="$('form[name=\'register_form\']').submit();return false;">
 															Register
 															<i class="icon-arrow-right icon-on-right"></i>
 														</button>
@@ -266,12 +271,12 @@
 
 		<!--[if !IE]> -->
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+<script src="assets/js/jquery-2.0.3.min.js"></script>
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="assets/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
 
 		<!--[if !IE]> -->
@@ -302,8 +307,10 @@
 		</script>
                 <{if $msg}>
         <script type="text/javascript">
-            jQuery(function($) {
-                    alert("<{$msg}>");
+            jQuery(function($) { 
+                var msg="<{$msg}>";
+                var myalert=new Myalert("<{$msg_title}>",msg);
+                myalert.alert();
             }
         </script>
                 <{/if}>

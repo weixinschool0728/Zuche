@@ -3,7 +3,7 @@
 class AppValidator extends ModalValidator {
 
 	function AppValidator() {
-		$this->BraveDB();
+		$this->ModalDB();
 		$this->mansionAdmin = $this->getSession(SESSION_USER);
 		$this->mansionId = $this->mansionAdmin['mansion_id'];
 	}

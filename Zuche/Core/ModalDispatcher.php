@@ -21,9 +21,9 @@ class ModalDispatcher extends Modal{
 
         // router
 //        if (is_null($config)) {
-//            $BraveRouter = $this->load(CORE, 'BraveRouter');
+//            $ModalRouter = $this->load(CORE, 'ModalRouter');
 //
-//            if ($result = $BraveRouter->dispatch()) {
+//            if ($result = $ModalRouter->dispatch()) {
 //                $config = $result['action'];
 //                $data = $result;
 //            }
@@ -51,13 +51,13 @@ class ModalDispatcher extends Modal{
         
         // act check
 //        if (!CLI_MODE) {
-//            $BraveAct = $this->load(CORE, 'BraveAct');
+//            $ModalAct = $this->load(CORE, 'ModalAct');
 //            $config = array(
 //                $this->controllerAccessor => $controllerName,
 //                $this->actionAccessor => $actionName,
 //            );
 //
-//            if (!$BraveAct->valid($config)) {
+//            if (!$ModalAct->valid($config)) {
 //                $this->debug("Act failed!", E_USER_ERROR);
 //                return false;
 //            }

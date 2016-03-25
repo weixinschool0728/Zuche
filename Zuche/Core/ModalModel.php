@@ -129,7 +129,7 @@ class ModalModel extends ModalDB {
                 $this->paging['page'] = 1;
             }
 
-            $paginate = $this->load(CORE, 'BravePaginate');
+            $paginate = $this->load(CORE, 'ModalPaginate');
             $result = $paginate->parse($this->paging);
             $this->paging = array_merge($this->paging, $result);
 
@@ -137,7 +137,6 @@ class ModalModel extends ModalDB {
             $offset = $this->paging['one'];
             $sql.= "LIMIT {$row},{$offset}";
         }
-
         return $this->getAll($sql);
     }
 

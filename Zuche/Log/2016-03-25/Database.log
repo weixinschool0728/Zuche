@@ -1,0 +1,666 @@
+[2016-03-25 05:42:54]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 05:42:54]
+select * from tb_car where deleted =0 and car_id= '14' limit 1;
+
+[2016-03-25 05:43:16]
+select * from tb_user where email='xiayuanchuan' and deleted =0 limit 1;
+
+[2016-03-25 05:43:27]
+select * from tb_user where email='admin' and deleted =0 limit 1;
+
+[2016-03-25 05:44:46]
+select * from tb_user where email='xiaxia' and deleted =0 limit 1;
+
+[2016-03-25 05:44:57]
+select * from tb_user where email='xiaxia' and deleted =0 limit 1;
+
+[2016-03-25 05:45:14]
+select * from tb_user where email='772321344@qq.com' and deleted =0 limit 1;
+
+[2016-03-25 05:45:14]
+UPDATE `tb_user` SET `updated` = '2016-03-25 05:45:14' WHERE u_id;
+
+[2016-03-25 05:45:14]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 05:45:14]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 05:45:32]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 05:45:32]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 05:59:05]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 05:59:05]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 06:05:03]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:05:03]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:06:05]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:06:05]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:06:31]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:06:31]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:07:54]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:07:54]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:11:48]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:11:48]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:15:27]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 06:15:27]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:15:27]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:17:11]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:17:11]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:18:56]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:18:56]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:19:25]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:19:25]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:20:51]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:20:51]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:21:18]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:21:18]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:21:51]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:21:51]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:22:23]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:22:23]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:22:58]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:22:58]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:23:27]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:23:27]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:25:21]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:25:21]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:25:39]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:25:39]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:26:29]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:26:29]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:27:56]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:27:56]
+select * from tb_car where deleted =0 LIMIT 20,10;
+
+[2016-03-25 06:28:27]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 06:28:27]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 06:29:14]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:29:14]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:29:17]
+select * from tb_car where deleted =0 and car_id= '1' limit 1;
+
+[2016-03-25 06:29:28]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:29:28]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:30:24]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:30:24]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:32:20]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:32:20]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:32:37]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:32:37]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:34:13]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:34:13]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:37:08]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:37:08]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:37:11]
+select * from tb_car where deleted =0 and car_id= 'undefined' limit 1;
+
+[2016-03-25 06:37:24]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:37:24]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:37:26]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:37:26]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:37:27]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 06:37:47]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:37:47]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:42:07]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:42:07]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:42:12]
+select * from tb_car where deleted =0 and car_id= '1' limit 1;
+
+[2016-03-25 06:43:01]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:43:01]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:43:02]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:43:02]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:43:56]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:43:56]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:45:21]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:45:21]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:45:57]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 06:45:57]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:45:57]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:46:35]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:46:35]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:51:09]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:51:09]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:51:44]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:51:44]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:52:17]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:52:17]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:52:37]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:52:37]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:52:41]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:52:41]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:59:20]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 06:59:20]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 06:59:27]
+UPDATE `tb_car` SET `deleted` = '1' WHERE delete=0 and car_id='';
+
+[2016-03-25 07:01:02]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:01:02]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:01:04]
+UPDATE `tb_car` SET `deleted` = '1' WHERE delete=0 and car_id=`1`;
+
+[2016-03-25 07:02:09]
+UPDATE `tb_car` SET `deleted` = '1' WHERE deleted=0 and car_id=`1`;
+
+[2016-03-25 07:02:58]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:02:58]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:03:01]
+UPDATE `tb_car` SET `deleted` = '1' WHERE deleted=0 and car_id=1;
+
+[2016-03-25 07:03:03]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:03:03]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:04:17]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:04:17]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:04:21]
+UPDATE `tb_car` SET `deleted` = '1' WHERE deleted=0 and car_id=2;
+
+[2016-03-25 07:04:29]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:04:29]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:04:55]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:04:55]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:42]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:42]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:45]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:45]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:51]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:05:54]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:05:54]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:05:59]
+UPDATE `tb_car` SET `deleted` = '1' WHERE deleted=0 and car_id=4;
+
+[2016-03-25 07:06:01]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:06:01]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:07:18]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:07:18]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:07:54]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:07:54]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:08:09]
+UPDATE `tb_car` SET `deleted` = '1' WHERE deleted=0 and car_id=13;
+
+[2016-03-25 07:08:11]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:08:11]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:08:21]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:08:21]
+select * from tb_car where deleted =0 LIMIT 30,10;
+
+[2016-03-25 07:08:24]
+UPDATE `tb_car` SET `deleted` = '1' WHERE deleted=0 and car_id=37;
+
+[2016-03-25 07:08:26]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:08:26]
+select * from tb_car where deleted =0 LIMIT 30,10;
+
+[2016-03-25 07:08:33]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:08:33]
+select * from tb_car where deleted =0 LIMIT 30,10;
+
+[2016-03-25 07:16:51]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 07:16:51]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:16:51]
+select * from tb_car where deleted =0 LIMIT 30,10;
+
+[2016-03-25 07:24:35]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:24:35]
+select * from tb_car where deleted =0 LIMIT 30,10;
+
+[2016-03-25 07:25:26]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:25:26]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:43:38]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:43:38]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:43:46]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:43:46]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:44:04]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 07:44:04]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 07:44:09]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:44:09]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 07:44:09]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 07:44:10]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 07:44:10]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 07:47:02]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 07:47:02]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:47:03]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 07:47:03]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 07:49:17]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:49:57]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:50:04]
+select * from tb_car where deleted =0 and car_id= '' limit 1;
+
+[2016-03-25 07:50:08]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:54:18]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:55:56]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:57:10]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:57:29]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:57:57]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 07:58:05]
+SELECT COUNT(*) FROM tb_car where deleted =0 and c_id='8'  ORDER BY sort asc ;
+
+[2016-03-25 07:58:05]
+select * from tb_car where deleted =0 and c_id='8'  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 08:20:14]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 08:20:14]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 08:20:14]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 08:20:18]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 08:20:18]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 08:20:21]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:41:29]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 08:41:29]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 08:41:37]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 08:41:37]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 08:41:40]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:41:43]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:41:57]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:43:49]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:45:02]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:45:10]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:45:55]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:46:03]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:47:47]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:50:37]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 08:50:37]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:51:01]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:52:52]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:53:03]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:54:54]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:55:00]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:55:57]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:56:30]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:57:06]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 08:57:23]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
