@@ -24,5 +24,10 @@ class ClassModel extends AppModel {
         $sql = "select * from {$this->table} where deleted=0 and c_id={$classId} limit 1";
         return $this->getOne($sql);
     }
+    
+    function getCLassByPid($pid=0){
+        $sql="select * from {$this->table} where deleted=0 and p_id={$pid}";
+        return $this->getAll($sql);
+    }
 
 }

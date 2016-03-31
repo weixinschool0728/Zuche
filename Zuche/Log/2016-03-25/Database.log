@@ -664,3 +664,66 @@ select * from tb_car where deleted =0 and car_id= '3' limit 1;
 [2016-03-25 08:57:23]
 select * from tb_car where deleted =0 and car_id= '3' limit 1;
 
+[2016-03-25 09:12:17]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 09:12:19]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 09:13:52]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 09:13:55]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 09:19:12]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 09:21:08]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 09:21:08]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 09:31:13]
+select * from tb_class where deleted=0 and p_id=0;
+
+[2016-03-25 09:53:57]
+select name,c_id,p_id from tb_class where deleted=0 order by tuijian desc,sort;
+
+[2016-03-25 09:53:57]
+select * from tb_class where deleted=0 and p_id=0;
+
+[2016-03-25 09:54:01]
+SELECT COUNT(*) FROM tb_car where deleted =0  ORDER BY sort asc ;
+
+[2016-03-25 09:54:01]
+select * from tb_car where deleted =0  ORDER BY sort asc LIMIT 0,10;
+
+[2016-03-25 09:54:06]
+SELECT COUNT(*) FROM tb_car where deleted =0 ;
+
+[2016-03-25 09:54:06]
+select * from tb_car where deleted =0 LIMIT 0,10;
+
+[2016-03-25 09:54:09]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 10:00:23]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 10:00:55]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 10:01:51]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 10:04:39]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 10:05:07]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+
+[2016-03-25 10:05:50]
+select * from tb_car where deleted =0 and car_id= '3' limit 1;
+

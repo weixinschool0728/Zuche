@@ -57,6 +57,9 @@ class CarController extends AppController {
         $this->view->layout();
     }
     function mDoEditAction(){
+        if (!$this->isAdmin()) {
+            $this->redirect("index");
+        }
         
         pr($_POST);
     }

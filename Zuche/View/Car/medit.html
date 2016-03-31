@@ -40,46 +40,69 @@
         </div>
 
         <div class="row">
-            
+
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
 
-                <form class="form-horizontal" method="POST" action="/?c=Car&a=mDoEdit"  role="form">
+                <form class="form-horizontal" method="POST" action="/?c=Car&a=mDoEdit&carid=<{$car['car_id']}>"  role="form">
                     <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Text Field </label>
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 车名 </label>
 
                         <div class="col-sm-9">
-                            <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5">
+                            <input type="text" name='car_name' value='<{$car.car_name}>' id="form-field-1" placeholder="车名" class="col-xs-10 col-sm-5">
                         </div>
                     </div>
 
                     <div class="space-4"></div>
-
                     <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password Field </label>
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">分类 </label>
 
                         <div class="col-sm-9">
-                            <input type="password" id="form-field-2" placeholder="Password" class="col-xs-10 col-sm-5">
+                            <select class="form-control pull-left" id="form-field-select-1" style="width: 30%;min-width: 100px;">
+                            
+                            </select>
+                            <select class="form-control col-xs-10 col-sm-5 pull-left" id="form-field-select-2"  style="width: 30%;min-width: 100px;">
+                            
+                            </select>
+                            <!--<input type="text" name='car_dec' id="form-field-2" value="<{$car.car_dec}>" placeholder="简介" class="col-xs-10 col-sm-5">-->
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">简介 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name='car_dec' id="form-field-2" value="<{$car.car_dec}>" placeholder="简介" class="col-xs-10 col-sm-5">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">排序 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name='sort' id="form-field-2" value="<{$car.sort}>" placeholder="排序" class="col-xs-10 col-sm-5">
                             <span class="help-inline col-xs-12 col-sm-7">
-                                <span class="middle">Inline help text</span>
+                                <span class="middle">数字越小越在前</span>
                             </span>
                         </div>
                     </div>
 
                     <div class="space-4"></div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password Field </label>
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 图文详情 </label>
 
                         <div class="col-sm-9">
-                            
+
                             <textarea name="content1" style="width:700px;height:500px;visibility:hidden;"></textarea>
                         </div>
-                        
+
                     </div>
 
-                    
-                    
-                    
+
+
+
 
                     <div class="clearfix form-actions">
                         <div class="col-md-offset-3 col-md-9">
@@ -100,24 +123,38 @@
 
 
             </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
             <!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.page-content -->
 </div><!-- /.main-content -->
 
 <script>
-    $(function(){
-       
+    $(function () {
+        $("#form-field-select-1").change(function(){
+             getClass($(this).val(),"#form-field-select-2");
+            
+        });
+        getClass(0,"#form-field-select-1");
     });
-    
-    
+    function getClass(id,domId){
+        $.post("?c=Class&a=getClassApi",{"pid":id},function(data){
+           data=$.parseJSON(data);
+            var str=" <option value=''>请选择</option>";
+                for(var i in data){
+                str+=" <option value="+data[i]["c_id"]+">"+data[i]['name']+"</option>";
+            }
+            
+            $(domId).html(str);
+        });
+    }
+
 </script>
