@@ -15,4 +15,15 @@ class OrderModel extends AppModel{
         $data['created']=NOW;
         return $this->Insert($this->table, $data);
     }
+    function getOrderList($sh = null) {
+
+
+        $this->setSearch($sh);
+        $sql = "select * from {$this->table}"
+            . " where deleted =0 ";
+        $this->paging('paging.admin');
+        $res = $this->paginate($sql);
+        return $res;
+    }
+
 }

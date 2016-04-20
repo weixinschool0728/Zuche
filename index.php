@@ -19,6 +19,7 @@ define('DS', DIRECTORY_SEPARATOR);
 define("INDEX_PATH",  dirname(__FILE__).DS);
 define("APP",INDEX_PATH."Zuche".DS);
 define("KIND_EDITOR", "."."/"."assets"."/"."kindeditor"."/");
+define("APP_UPLOAD", "."."/"."assets"."/"."upload"."/");
 //echo KIND_EDITOR;
 
 require_once APP.DS."init.php";

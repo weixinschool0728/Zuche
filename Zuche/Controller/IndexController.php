@@ -11,6 +11,7 @@ class IndexController extends AppController {
 
     function indexAction() {
         $sh = $this->get("sh");
+		$this->view->assign('sh', $sh);
         $carModel = $this->getModel("Car");
         $classId = $this->get("classid", 0);
 

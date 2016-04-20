@@ -25,6 +25,17 @@ class UserModel extends AppModel {
         }
         return $this->getAll($sql);
     }
+    
+    function getOrderListSh($sh = null) {
+
+
+        $this->setSearch($sh);
+        $sql = "select * from {$this->table}"
+            . " where deleted =0 ";
+        $this->paging('paging.admin');
+        $res = $this->paginate($sql);
+        return $res;
+    }
 
     function getUserByEmail($email) {
         if (!$email) {

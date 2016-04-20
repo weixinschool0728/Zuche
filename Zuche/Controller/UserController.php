@@ -6,9 +6,9 @@
  * time 2015-11-30
  * @author xiayuanchuan<772321344@qq.com>
  */
-class OrderController extends AppController {
+class UserController extends AppController {
 
-    function OrderController() {
+    function UserController() {
         $this->AppController();
         //登陆
         $this->isLogin($_SERVER['HOST_NAME'] . $_SERVER['REQUEST_URI']);
@@ -18,6 +18,15 @@ class OrderController extends AppController {
         $carModel = $this->getModel("Order");
         $sh = $this->get("sh");
         $cararr = $carModel->getOrderList($sh);
+        $this->view->assign('paging', $carModel->paging);
+        $this->view->assign('car', $cararr);
+        $this->view->layout();
+    }
+    
+    function userListAction(){
+        $carModel = $this->getModel("User");
+        $sh = $this->get("sh");
+        $cararr = $carModel->getOrderListSh($sh);
         $this->view->assign('paging', $carModel->paging);
         $this->view->assign('car', $cararr);
         $this->view->layout();

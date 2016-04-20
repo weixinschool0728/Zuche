@@ -21,6 +21,7 @@ class CarModel extends AppModel {
             $sql = "select * from {$this->table}"
                     . " where deleted =0 and c_id='{$classId}' ";
         }
+        $this->where($sql, 'car_name', 'carseach', 'lk');
         $this->order($sql, 'order.car');
         $this->paging('paging.admin');
         if ($isAll) {
@@ -34,7 +35,7 @@ class CarModel extends AppModel {
     public function getCarById($carId = 0) {
 
         $sql = "select * from {$this->table}"
-                . " where deleted =0 and car_id= '{$carId}' limit 1";
+                . " where deleted =0 and car_id={$carId} limit 1";
         return $this->getOne($sql);
     }
     

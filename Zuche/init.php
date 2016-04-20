@@ -12,7 +12,7 @@ define("LIBRARY", APP . "Library" . DS);
 define("EXTEND", APP . "Extend" . DS);
 define("APP_LOG", APP . "Log" . DS);
 define("APP_CACHE", APP . "Cache" . DS);
-
+//define("APP_UPLOAD", "./")
 
 require_once APP_CONFIG . "App.inc.php";
 require_once APP_CONFIG . "Core.inc.php";

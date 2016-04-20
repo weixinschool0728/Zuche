@@ -44,7 +44,7 @@
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
 
-                <form class="form-horizontal" method="POST" action="/?c=Car&a=mDoEdit&carid=<{$car['car_id']}>"  role="form">
+                <form class="form-horizontal" method="POST" action="/?c=Car&a=mDoEdit&carid=<{$car['car_id']}>" enctype="multipart/form-data"  role="form">
                     <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 车名 </label>
 
@@ -88,6 +88,14 @@
                             </span>
                         </div>
                     </div>
+                                        <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">价格 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name='price' id="form-field-2" value="<{$car.price}>" placeholder="价格" class="col-xs-10 col-sm-5">
+                        </div>
+                    </div>
+                    
 
                     <div class="space-4"></div>
                     <div class="form-group">
@@ -95,9 +103,37 @@
 
                         <div class="col-sm-9">
 
-                            <textarea name="content1" style="width:700px;height:500px;visibility:hidden;"></textarea>
+                            <textarea name="content1" style="width:700px;height:500px;visibility:hidden;"><{$car.description}></textarea>
                         </div>
 
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">图片封面</label>
+
+                        <div class="col-sm-9">
+                          
+                           <img width="100" src="<{$car.car_head}>">
+                           <input type='file' name='imagehead[]'>
+                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">图片介绍 (点击图片删除)</label>
+
+                        <div class="col-sm-9">
+                           <{foreach from=$car_images item=image}>
+                           <img src="<{$image}>" width="100" imageid="<{$car.car_id}>" onclick="delimage(this)">
+                           <{/foreach}>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2">添加图片 </label>
+
+                        <div class="col-sm-9">
+                            <input type="file" name='fileimages[]' onchange="imageeschanges(this)" id="form-field-2"  placeholder="图片" class="col-xs-10 col-sm-5" accept="image/*">
+                            <button class="btn" id="imageadd" onclick="return false;">添加</button>
+                        </div>
                     </div>
 
 
@@ -139,6 +175,11 @@
 
 <script>
     $(function () {
+
+        $("#imageadd").click(function(){
+            var str='<input type="file" name="fileimages[]" id="form-field-2" onchange="imageeschanges(this)"  class="col-xs-10 col-sm-5"  accept="image/*">';
+            $(this).before(str);
+        });
         $("#form-field-select-1").change(function(){
              getClass($(this).val(),"#form-field-select-2");
             
@@ -156,5 +197,21 @@
             $(domId).html(str);
         });
     }
-
+function delimage(obj){
+  var immgurl=$(obj).attr('src');
+  var id=$(obj).attr('imageid');
+  if(confirm("确定删除？")){
+      $.post("?c=Car&a=imageajaxdel&id="+id,{'imgurl':immgurl},function(data){
+          data=$.parseJSON(data);
+          if(data.status==true){
+              alert("删除成功");
+              window.location.href='';
+          }else{
+               alert("删除失败");
+              window.location.href='';
+          }
+      });
+  }
+  
+}
 </script>

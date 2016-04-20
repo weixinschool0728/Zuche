@@ -15,6 +15,7 @@ class AppController extends ModalController {
         $this->view->assign('msg_title', $this->getSession('msg_title', true));
         //获取菜单
         $this->setMenu();
+        $this->setCode();
 
 
 //        $this->view->assign('msg_title', $this->getSession('msg_title', ture));

@@ -7,27 +7,21 @@ $code['adminMenu'] = array(
 		'sub' => array(
             'user' => array(
                 'name' => '用户管理',
-                'uri' => '?c=admin&a=userList',
+                'uri' => '?c=User&a=userList',
                 'menu_no' => 'no_1',
             ),
             'order' => array(
                 'name' => '订单管理',
                 'sub' => array(
-                    'index' => array('name' => 'ユーザ設定', 'uri' => '?c=user&amp;a=index', 'menu_no' => 'no_2',),
-                    'serviceSetting' => array('name' => '利用サービス設定', 'uri' => '?c=user&amp;a=serviceSetting', 'menu_no' => 'no_3',),
-                    'contact' => array('name' => '連絡先情報', 'uri' => '?c=user&amp;a=contact', 'menu_no' => 'no_4',),
+                    'index' => array('name' => '订单一览', 'uri' => '?c=order&amp;a=index', 'menu_no' => 'no_2',),
+                   
                 ),
             ),
-            'orderLog' => array(
-                'name' => '订单日志',
-                'sub' => array(
-                    'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_5',),
-                ),
-            ),
+           
             'class' => array(
                 'name' => '分类管理',
                 'sub' => array(
-                    'index' => array('name' => '利用状況・契約手続', 'uri' => '?c=product&a=index', 'menu_no' => 'no_6',),
+                    'index' => array('name' => '分类一览', 'uri' => '?c=product&a=index', 'menu_no' => 'no_6',),
                 ),
             ),
             'carmanger' => array(
@@ -38,6 +32,27 @@ $code['adminMenu'] = array(
             ),
         ),
     
+);
+$code['orderstatus'] = array(
+    0 => "未支付",
+    1 => "支付失败",
+    2 => "支付成功",
+    3 => "支付取消",
+);
+$code['sex'] = array(
+    0 => "女",
+    1 => "男",
+
+);
+$code['user_type'] = array(
+    0 => "普通用户",
+    1 => "管理员",
+    2 => "超级管理员",
+);
+$code['u_vip'] = array(
+    0 => "普通用户",
+    1 => "一级会员",
+    2 => "二级会员",
 );
 
 $code['order'] = array(

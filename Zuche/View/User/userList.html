@@ -12,7 +12,7 @@
                 <i class="icon-home home-icon"></i>
                 <a href="#">首页</a>
             </li>
-            <li class="active">订单管理</li>
+            <li class="active">用户管理</li>
         </ul><!-- .breadcrumb -->
 
         <div class="nav-search" id="nav-search">
@@ -28,7 +28,7 @@
     <div class="page-content">
         <div class="page-header pull-left">
             <h1>
-                车辆管理
+                用户管理
                 <small>
                     <i class="icon-double-angle-right"></i>
                     查看
@@ -52,13 +52,15 @@
                                         <span class="lbl"></span>
                                     </label>
                                 </th>
-                                <th>订单编号</th>
-                                <th>车名</th>
-                                <th>价格</th>
-                                <th>用户Id</th>
-                                <th>订单状态</th>
+                                <th>用户名</th>
+                                <th>邮箱</th>
+                                <th>电话</th>
+                                <th>性别</th>
+                                <th>用户权限</th>
+                                <th>会员等级</th>
 
-                                <th >描述</th>
+                                <th >创建时间</th>
+                                <th >更新时间</th>
                                 
                                 <th></th>
                             </tr>
@@ -69,35 +71,37 @@
                             <tr>
                                 <td class="center">
                                     <label>
-                                        <input type="checkbox" name="ids[]" value="<{$c['o_id']}>" class="ace">
+                                        <input type="checkbox" name="ids[]" value="<{$c['u_id']}>" class="ace">
                                         <span class="lbl"></span>
                                     </label>
                                 </td>
 
                                 <td>
-                                    <{$c['o_no']}>
+                                    <{$c['name']}>
                                 </td>
                                 <td>
-                                   <a href="/?c=car&a=index&carid=<{$c.car_id}>"><{$c['car_name']}></a>
+                                  <{$c['email']}>
                                 </td>
-                                <td><{$c.price}></td>
-                                <td><{$c.u_id}></td>
-                                <td><{$code['orderstatus'][$c.status]}></td>
-                                <td ><{$c.o_dec|truncate:200}></td>
+                                <td><{$c.phone}></td>
+                                <td><{$code['sex'][$c.sex]}></td>
+                                <td><{$code['user_type'][$c.u_type]}></td>
+                                <td><{$code['u_vip'][$c.u_vip]}></td>
+                                <td ><{$c.created}></td>
+                                <td ><{$c.updated}></td>
 
                               
 
                                 <td>
                                     <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success" id="<{$c.o_id}>">
+                                        <button class="btn btn-xs btn-success" id="<{$c.u_id}>">
                                             <i class="icon-ok bigger-120"></i>
                                         </button>
 
-                                        <button class="btn btn-xs btn-info" id="<{$c.o_id}>">
+                                        <button class="btn btn-xs btn-info" id="<{$c.u_id}>">
                                             <i class="icon-edit bigger-120"></i>
                                         </button>
 
-                                        <button class="btn btn-xs btn-danger" id="<{$c.o_id}>">
+                                        <button class="btn btn-xs btn-danger" id="<{$c.u_id}>">
                                             <i class="icon-trash bigger-120"></i>
                                         </button>
 

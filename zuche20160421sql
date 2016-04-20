@@ -1,0 +1,133 @@
+/*
+SQLyog 企业版 - MySQL GUI v8.14 
+MySQL - 5.6.12-log : Database - zuche
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`zuche` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `zuche`;
+
+/*Table structure for table `tb_car` */
+
+DROP TABLE IF EXISTS `tb_car`;
+
+CREATE TABLE `tb_car` (
+  `car_id` int(32) NOT NULL AUTO_INCREMENT,
+  `c_id` int(32) DEFAULT '0',
+  `car_name` varchar(255) NOT NULL,
+  `car_head` varchar(255) DEFAULT NULL,
+  `car_images` text,
+  `car_dec` varchar(255) DEFAULT NULL,
+  `sort` smallint(10) NOT NULL DEFAULT '0',
+  `price` decimal(10,2) DEFAULT '0.00',
+  `deleted` tinyint(2) DEFAULT '0',
+  `description` text,
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  `car_num` int(32) DEFAULT '0' COMMENT '车数量',
+  `attributes` text COMMENT '序列化的属性 键值对',
+  PRIMARY KEY (`car_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_car` */
+
+insert  into `tb_car`(`car_id`,`c_id`,`car_name`,`car_head`,`car_images`,`car_dec`,`sort`,`price`,`deleted`,`description`,`created`,`updated`,`car_num`,`attributes`) values (1,6,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',1,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(3,6,'经济型','/assets/upload/img/2015-11-27/image-2.jpg','a:5:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:61:\"./assets/upload/20160420/b0b933d476b8430137321e4be552c8e3.jpg\";}','描述',0,'222.00',1,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(7,6,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',1,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(8,6,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',1,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(12,6,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',1,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(14,7,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',1,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,'a:4:{s:6:\"座位\";s:4:\"7座\";s:6:\"类型\";s:6:\"商务\";s:6:\"颜色\";s:6:\"白色\";s:18:\"所需驾照类型\";s:2:\"C1\";}'),(16,7,'226','./assets/upload/20160420/003641ac499acf2fe49841ba4ae57c86.png','a:9:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:16:\"./assets/upload/\";i:6;s:16:\"./assets/upload/\";i:7;s:16:\"./assets/upload/\";i:8;s:16:\"./assets/upload/\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(17,7,'1111','./assets/upload/20160420/82e791ddd15af48c2b39fa26506d4a52.jpg','a:7:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";i:6;s:16:\"./assets/upload/\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(18,7,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(20,7,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(23,7,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(24,7,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(25,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(26,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(27,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(29,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(31,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(32,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL),(34,8,'1111','/assets/upload/img/2015-11-27/image-2.jpg','a:6:{i:0;s:41:\"/assets/upload/img/2015-11-27/image-1.jpg\";i:1;s:41:\"/assets/upload/img/2015-11-27/image-2.jpg\";i:2;s:41:\"/assets/upload/img/2015-11-27/image-3.jpg\";i:3;s:41:\"/assets/upload/img/2015-11-27/image-4.jpg\";i:4;s:41:\"/assets/upload/img/2015-11-27/image-5.jpg\";i:5;s:41:\"/assets/upload/img/2015-11-27/image-6.jpg\";}','描述',0,'0.00',0,'','2015-02-20 11:11:11','2015-02-20 11:11:11',0,NULL);
+
+/*Table structure for table `tb_class` */
+
+DROP TABLE IF EXISTS `tb_class`;
+
+CREATE TABLE `tb_class` (
+  `c_id` int(32) NOT NULL AUTO_INCREMENT COMMENT '分类ID',
+  `p_id` int(32) DEFAULT '0' COMMENT '父类ID',
+  `name` char(32) DEFAULT NULL COMMENT '名称',
+  `sort` int(8) DEFAULT '0' COMMENT '排序',
+  `tuijian` tinyint(2) DEFAULT '0' COMMENT '推荐 1推荐  ',
+  `deleted` tinyint(2) DEFAULT '0',
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`c_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_class` */
+
+insert  into `tb_class`(`c_id`,`p_id`,`name`,`sort`,`tuijian`,`deleted`,`created`,`updated`) values (1,0,'经济型',0,0,0,NULL,NULL),(2,0,'舒适型',0,0,0,NULL,NULL),(3,0,'运动型',0,0,0,NULL,NULL),(4,0,'年轻型',0,0,0,NULL,NULL),(5,0,'精简型',0,0,0,NULL,NULL),(6,1,'中等',1,0,0,NULL,NULL),(7,1,'高端',1,0,0,NULL,NULL),(8,1,'亲民',1,0,0,NULL,NULL),(9,2,'高端',2,0,0,NULL,NULL),(10,2,'中等',2,0,0,NULL,NULL);
+
+/*Table structure for table `tb_order` */
+
+DROP TABLE IF EXISTS `tb_order`;
+
+CREATE TABLE `tb_order` (
+  `o_id` int(32) NOT NULL AUTO_INCREMENT COMMENT '订单编号',
+  `o_no` varchar(32) DEFAULT NULL COMMENT '订单支付编号',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `car_id` int(32) DEFAULT NULL COMMENT '车ID',
+  `car_name` varchar(255) DEFAULT NULL COMMENT '车名',
+  `u_id` int(32) DEFAULT '0' COMMENT '用户ID',
+  `status` tinyint(3) DEFAULT '0' COMMENT '0: 未支付 , 1: 支付失败, 2:支付成功，3：支付取消',
+  `o_dec` text COMMENT '订单描述 ',
+  `deleted` tinyint(2) DEFAULT '0' COMMENT '删除 0:正常，1：删除',
+  `created` datetime DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
+  `start_time` datetime DEFAULT '0000-00-00 00:00:00' COMMENT '服务开始时间',
+  `end_time` datetime DEFAULT '0000-00-00 00:00:00' COMMENT '结束时间',
+  PRIMARY KEY (`o_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_order` */
+
+insert  into `tb_order`(`o_id`,`o_no`,`price`,`car_id`,`car_name`,`u_id`,`status`,`o_dec`,`deleted`,`created`,`start_time`,`end_time`) values (1,'d352370f7c1fe6e88326022827fedaa5','0.00',0,'NULL',1,0,'NULL',0,'2016-04-20 14:19:37','0000-00-00 00:00:00','0000-00-00 00:00:00'),(2,'e67bcd1ea7daed1fa70d91cc1fee139e','0.00',17,'1111',1,0,'',0,'2016-04-20 14:21:20','2016-06-08 22:21:15','2016-06-30 22:21:15');
+
+/*Table structure for table `tb_order_log` */
+
+DROP TABLE IF EXISTS `tb_order_log`;
+
+CREATE TABLE `tb_order_log` (
+  `o_chang_id` int(32) NOT NULL AUTO_INCREMENT,
+  `o_id` int(32) DEFAULT '0' COMMENT '订单ID',
+  `operate` tinyint(10) DEFAULT '0' COMMENT '操作类型： ',
+  `car_id` int(32) DEFAULT NULL COMMENT '车类型',
+  `car_name` varchar(255) DEFAULT NULL COMMENT '车名',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `deleted` tinyint(2) DEFAULT '0' COMMENT '删除 0：正常 1删除',
+  `created` datetime DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
+  PRIMARY KEY (`o_chang_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_order_log` */
+
+/*Table structure for table `tb_user` */
+
+DROP TABLE IF EXISTS `tb_user`;
+
+CREATE TABLE `tb_user` (
+  `u_id` int(32) NOT NULL AUTO_INCREMENT,
+  `u_type` tinyint(2) DEFAULT '0' COMMENT '普通用户0 1管理员',
+  `u_vip` tinyint(10) DEFAULT '0' COMMENT 'vip等级',
+  `name` char(32) DEFAULT NULL,
+  `password` char(32) DEFAULT NULL,
+  `sex` tinyint(2) DEFAULT '1' COMMENT '男1 女 0',
+  `phone` char(32) DEFAULT NULL,
+  `deleted` tinyint(2) DEFAULT '0' COMMENT '删除',
+  `created` datetime DEFAULT '0000-10-10 10:10:10',
+  `updated` datetime DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL COMMENT '邮件',
+  PRIMARY KEY (`u_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_user` */
+
+insert  into `tb_user`(`u_id`,`u_type`,`u_vip`,`name`,`password`,`sex`,`phone`,`deleted`,`created`,`updated`,`email`) values (1,1,1,'xiaxia','e10adc3949ba59abbe56e057f20f883e',1,'13618006670',0,'0000-10-10 10:10:10','2016-04-20 11:33:43','772321344@qq.com'),(2,0,1,'xia','e10adc3949ba59abbe56e057f20f883e',1,'1',0,'0000-10-10 10:10:10','2016-04-20 11:33:43','772321344'),(3,0,0,'772321344@qq.com','e10adc3949ba59abbe56e057f20f883e',1,'13616006670',0,'2015-11-29 13:47:33','2016-04-20 11:33:43','xiayuanchuan@bravesoft.co.jp');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

@@ -13,10 +13,12 @@
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
-							<form class="form-search">
+							<form class="form-search" method="get">
+                                                            <input type="hidden" name="c" value="index" />
+                                                            <input type="hidden" name="a" value="index" />
 								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="icon-search nav-search-icon"></i>
+                                                                    <input type="text" placeholder="Search ..." class="nav-search-input" name="sh['carseach']" id="nav-search-input" autocomplete="off" />
+                                                                        <i class="icon-search nav-search-icon" style="left: inherit;right: 30px;" onclick="submitsearch()"></i>
 								</span>
 							</form>
 						</div><!-- #nav-search -->
@@ -68,7 +70,7 @@
 
                                         <li style="border:  2px solid #FFEBEB;">
                                             <a href="?c=car&a=index&carid=<{$cl.car_id}>"  class="cboxElement">
-                                                <img alt="150x150" src="<{$cl.car_head}>" width="250" alt="">
+                                                <img alt="150x150" src="<{$cl.car_head}>" width="250" height="240" alt="">
 												<div class="text">
 													<div class="inner"><{$cl.car_dec}></div>
 												</div>
@@ -124,3 +126,9 @@
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div><!-- /.main-content -->
+                                
+                                <script>
+                                    function submitsearch(){
+                                        $('.form-search').submit();
+                                    }
+                                </script>
