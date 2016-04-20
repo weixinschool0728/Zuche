@@ -60,8 +60,9 @@ class CarController extends AppController {
         if (!$this->isAdmin()) {
             $this->redirect("index");
         }
-        
+         $carModel = $this->getModel("Car");
         pr($_POST);
+        
     }
     
     

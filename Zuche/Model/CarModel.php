@@ -51,5 +51,9 @@ class CarModel extends AppModel {
     public function UpdateCar($where,$data){
         return $this->Update($this->table, $data,$where);
     }
+    public function InsertCar($data){
+        
+        return $this->Insert($this->table, $data);
+    }
 
 }

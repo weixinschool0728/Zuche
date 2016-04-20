@@ -99,6 +99,33 @@ class IndexController extends AppController {
             }
         }
     }
+    
+    function ajaxuploadimgAction() {
+
+        $img = trim($_POST["filename"]);
+        if(empty($img)){
+            echo json_encode(array("url"=>"",  'status' => "false"));
+            exit;
+        }
+        $img = str_replace("data:image/png;base64,", "", $img);
+        $img = str_replace(" ", "+", $img);
+        $imgdata = base64_decode($img);
+        $getupload_dir = "/assets/voteimg/" . date("Ymd");
+        $upload_dir = "." . $getupload_dir;
+
+        if (!is_dir($upload_dir)) {
+            mkdir($upload_dir, 511, true);
+        }
+
+        $newfilename = "voteimg_" . date("YmdHis") . uniqid() . ".jpg";
+        $save = file_put_contents($upload_dir . "/big_" . $newfilename, $imgdata);
+        $returns = array(
+            "url" => $upload_dir . "/big_" . $newfilename,
+            'status' => "success",
+        );
+        echo json_encode($returns);
+        exit;
+    }
 
 }
 
